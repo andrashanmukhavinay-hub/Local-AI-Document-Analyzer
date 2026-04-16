@@ -1,0 +1,12 @@
+# Ignore the virtual environment
+.venv/
+venv/
+env/
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# Ignore uploaded PDFs and local Vector Database files
+*.pdf
+chroma_db/
