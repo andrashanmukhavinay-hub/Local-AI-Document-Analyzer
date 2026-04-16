@@ -1,0 +1,100 @@
+Project Title:
+
+Local AI Document Analyzer: Secure Offline RAG System
+
+Click on the below link to view the project repository:\
+
+(Insert your GitHub Link Here: https://github.com/andrashanmukhavinay/Local-AI-Document-Analyzer)
+
+Project Description
+
+This project involves building a 100% secure, offline Retrieval-Augmented Generation (RAG) system to extract actionable insights and summarize large PDF documents using open-source Large Language Models (LLMs). The application operates entirely on a local machine without internet connectivity, ensuring absolute data privacy. The objectives of this project include:
+
+Document Ingestion & Processing:
+
+Extracting text from complex PDF documents and splitting the data into optimized, semantic chunks for accurate machine comprehension.
+
+Vectorization and Semantic Search:
+
+Creating a highly available localized vector database to store document embeddings, allowing the AI to instantly retrieve the most relevant information based on user queries.
+
+Secure Offline Interaction:
+
+Deploying an interactive web interface that allows users to chat with their documents locally using advanced generative AI, eliminating the risk of exposing sensitive data to external APIs.
+
+Pre-requisites:
+
+Before starting this project, you should have the following knowledge and tools in place:
+
+Intermediate Python Skills:
+
+o Knowledge of Python and handling temporary file streams, virtual environments, and package management.
+o Familiarity with integrating third-party APIs and libraries.
+
+Generative AI & RAG Concepts:
+
+o Understanding of Large Language Models (LLMs), prompt engineering, and the Retrieval-Augmented Generation (RAG) architecture.
+o Familiarity with text chunking strategies and embedding models.
+
+LangChain Framework:
+
+o Knowledge of utilizing LangChain to build document loaders, text splitters, and retrieval chains to connect LLMs to custom data sources.
+
+Basic Web Interface Development:
+
+o Familiarity with Streamlit for rapidly building and deploying interactive data applications.
+
+Tools & Technologies:
+
+o Ollama: Installed locally to run advanced LLMs offline.
+o Python IDE: VS Code or a similar environment for script execution.
+
+Key Steps and Implementation:
+
+System Setup and Model Initialization:
+
+Local LLM Deployment:
+
+o Configured Ollama to serve the llama3 model for high-level text generation and the nomic-embed-text model for efficient vectorization.
+o Built the backend architecture to communicate with these local models securely without external API keys.
+
+Data Ingestion and Transformation:
+
+2. Document Processing Pipeline:
+o Utilized LangChain’s PyPDFLoader to parse uploaded PDF documents dynamically.
+o Implemented RecursiveCharacterTextSplitter to break large documents into manageable chunks (1000 characters with a 200-character overlap), ensuring no loss of context between paragraphs.
+
+Database and Retrieval:
+
+3. Vector Database Integration:
+o Embedded the processed text chunks using the Nomic embedding model.
+o Initialized an in-memory ChromaDB vector store to hold the embeddings, ensuring fast, highly available similarity search capabilities during user queries.
+
+Application and User Interface:
+
+4. Interactive Streamlit Dashboard:
+o Designed a front-end web application using Streamlit that allows users to upload custom PDFs easily.
+o Constructed a LangChain retrieval pipeline (create_retrieval_chain) that captures user input, searches the ChromaDB for relevant context, and passes both to Llama 3 to generate a highly accurate, context-aware answer.
+o Implemented secure file handling to automatically delete temporary files from the local system once processing is complete.
+
+Tools and Technologies Used:
+
+• Python: Core programming language used for backend logic and library integration.
+• LangChain: Framework utilized to chain together document loaders, text splitters, vector stores, and the LLM into a cohesive RAG pipeline.
+• ChromaDB: The local vector database engine used to store embeddings and perform semantic search.
+• Ollama (Llama 3): The localized software stack used to run the primary generative AI and embedding models entirely offline.
+• Streamlit: Used to build the interactive, user-friendly front-end web interface.
+
+Key Deliverables:
+
+Highly Available Localized Stack:
+o A completely offline AI architecture capable of running sophisticated natural language tasks without internet access.
+
+Interactive AI Chat Interface:
+o A clean, intuitive Streamlit web app allowing non-technical users to upload and interrogate complex documents easily.
+
+Privacy-First Data Pipeline:
+o A robust document processing framework that reads, analyzes, and deletes temporary files securely, ensuring confidential information remains isolated.
+
+Impact:
+The project empowers users and organizations to leverage the massive analytical power of modern LLMs on highly sensitive, confidential, or proprietary documents without the security risks associated with cloud-based AI providers (like OpenAI or Google). By deploying a localized software stack, it drastically reduces infrastructure costs and provides a highly available, privacy-first tool for summarizing reports, extracting data, and making informed decisions faster.
